@@ -22,7 +22,7 @@ const HomeStackScreen = ({navigation}) => (
       name="Home"
       component={HomeScreen}
       options={{
-        title: 'School Feed',
+        title: 'Santa Cruz High',
         headerStyle: {
           backgroundColor: '#990000',
         },

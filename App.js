@@ -15,12 +15,14 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 
 import HomeStackScreen from './screens/HomeScreen.js';
 import DummyStackScreen from './screens/DummyScreen.js';
+import DrawerContent from './screens/DrawerContent.js';
+
 const Drawer = createDrawerNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator>
+      <Drawer.Navigator drawerContent={(props) => <DrawerContent {...props} />}>
         <Drawer.Screen name="Home" component={HomeStackScreen} />
         <Drawer.Screen name="Dummy" component={DummyStackScreen} />
       </Drawer.Navigator>
