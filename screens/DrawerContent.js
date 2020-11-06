@@ -28,7 +28,7 @@ function DrawerContent(props) {
                 color: '#eff0f1',
                 fontWeight: '600',
                 fontFamily: 'Helvetica Neue',
-                fontSize: 16,
+                fontSize: 19,
               }}
               icon={({_, size}) => (
                 <Icon name="home-outline" color="#eff0f1" size={size} />
@@ -43,7 +43,7 @@ function DrawerContent(props) {
                 color: '#eff0f1',
                 fontWeight: '600',
                 fontFamily: 'Helvetica Neue',
-                fontSize: 16,
+                fontSize: 18,
               }}
               icon={({_, size}) => (
                 <Icon name="bookmark-outline" color="#eff0f1" size={size} />
@@ -74,9 +74,9 @@ const styles = StyleSheet.create({
     // flexGrow: 1,
   },
   titleText: {
-    fontWeight: 'bold',
+    fontWeight: '600',
     color: '#fff',
-    fontSize: 20,
+    fontSize: 24,
   },
   lineStyle: {
     borderWidth: 0.4,

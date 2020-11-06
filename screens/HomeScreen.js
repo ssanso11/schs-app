@@ -151,8 +151,8 @@ function HomeScreen() {
   return (
     <ScrollView style={{flex: 1, backgroundColor: "#FFF"}}>
       <ImageBackground source={require('../assets/images/school-front-entrance.png')} style={styles.frontEntrancePicture} blurRadius={5}>
-        <View style={{position: 'absolute', left: 0, right: 0, bottom: 20, alignItems: 'center'}}>
-          <Text style={{ color: "#FFF", fontSize: 30, fontWeight: "700"}}>Go Cardinals!</Text>
+        <View style={{position: 'absolute', top:0, left: 0, right: 0, bottom: 0, alignItems: 'center', justifyContent: "center"}}>
+          <Text style={{ color: "#FFF", fontSize: 30, fontWeight: "700", letterSpacing: .3}}>Go Cardinals!</Text>
         </View>
       </ImageBackground>
       <View style={styles.mediaContainer}>
@@ -248,7 +248,8 @@ const styles = StyleSheet.create({
   },
   viewEventsButton: {
     marginLeft: 15,
-    marginBottom: 10
+    marginBottom: 10,
+    marginTop: 20,
   },
   readMoreButton: {
     marginLeft: 10,
