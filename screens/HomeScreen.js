@@ -178,8 +178,13 @@ function HomeScreen() {
           keyExtractor={item => item.id}
           scrollEnabled={false}
         />
+        <TouchableOpacity
+          onPress={() => Alert.alert('Open all news')}
+          style={styles.viewEventsButton}
+        >
+          <Text style={styles.viewEventsText}>View all news ></Text> 
+        </TouchableOpacity>
       </View>
-      
     </ScrollView>
   );
 }
@@ -243,6 +248,7 @@ const styles = StyleSheet.create({
   },
   viewEventsButton: {
     marginLeft: 15,
+    marginBottom: 10
   },
   readMoreButton: {
     marginLeft: 10,
