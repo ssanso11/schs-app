@@ -8,7 +8,8 @@ import {
   StatusBar,
   ScrollView,
   TouchableOpacity,
-  Alert
+  Alert,
+  ImageBackground
 } from 'react-native';
 
 //react-navigation imports
@@ -149,6 +150,11 @@ function HomeScreen() {
   );
   return (
     <ScrollView style={{flex: 1, backgroundColor: "#FFF"}}>
+      <ImageBackground source={require('../assets/images/school-front-entrance.png')} style={styles.frontEntrancePicture} blurRadius={5}>
+        <View style={{position: 'absolute', left: 0, right: 0, bottom: 20, alignItems: 'center'}}>
+          <Text style={{ color: "#FFF", fontSize: 30, fontWeight: "700"}}>Go Cardinals!</Text>
+        </View>
+      </ImageBackground>
       <View style={styles.mediaContainer}>
         <Text style={styles.titleStyle}>Upcoming Events</Text>
         <FlatList
@@ -182,6 +188,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginTop: StatusBar.currentHeight || 0,
+  },
+  frontEntrancePicture: {
+    width: "100%",
+    height: 122.5,
+    resizeMode: 'contain',
   },
   eventsItem: {
     paddingTop: 10,
