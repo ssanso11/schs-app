@@ -20,6 +20,6 @@ to install the necesary dependencies, followed by
 npx react-native run-ios
 ```
 
-to build the app
+to build the app.
 
 ![Alt text](./assets/images/home-screenshot.png?raw=true 'Demo')
