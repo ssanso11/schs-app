@@ -20,6 +20,12 @@ to install the necesary dependencies, followed by
 npx react-native run-ios
 ```
 
-to build the app.
+to build the app on iOS or
+
+```bash
+npx react-native run-ios
+```
+
+to build the app on Android.
 
 ![Alt text](./assets/images/home-screenshot.png?raw=true 'Demo')
