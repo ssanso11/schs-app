@@ -4,6 +4,43 @@ import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
+var DRAWER_ITEMS = [
+  {
+    name: "Home",
+    iconName: "home-outline",
+    navigateScreen: "Home"
+  },
+  {
+    name: "Dummy",
+    iconName: "bookmark-outline",
+    navigateScreen: "Dummy",
+  },
+]
+
+const NavBarItem = ({
+  name, 
+  iconName, 
+  navigateScreen,
+  props
+}) => (
+  <DrawerItem
+    labelStyle={{
+      color: '#eff0f1',
+      fontWeight: '600',
+      fontFamily: 'Helvetica Neue',
+      fontSize: 19,
+    }}
+    icon={({_, size}) => (
+      <Icon name={iconName} color="#eff0f1" size={size} />
+    )}
+    label={name}
+    onPress={() => {
+      props.navigation.navigate(navigateScreen);
+    }}
+  />
+);
+
+
 function DrawerContent(props) {
   return (
     <View style={{flex: 1, backgroundColor: '#990000'}}>
@@ -23,36 +60,14 @@ function DrawerContent(props) {
           <View style={styles.lineStyle} />
 
           <View style={styles.drawerSection}>
-            <DrawerItem
-              labelStyle={{
-                color: '#eff0f1',
-                fontWeight: '600',
-                fontFamily: 'Helvetica Neue',
-                fontSize: 19,
-              }}
-              icon={({_, size}) => (
-                <Icon name="home-outline" color="#eff0f1" size={size} />
-              )}
-              label="Home"
-              onPress={() => {
-                props.navigation.navigate('Home');
-              }}
-            />
-            <DrawerItem
-              labelStyle={{
-                color: '#eff0f1',
-                fontWeight: '600',
-                fontFamily: 'Helvetica Neue',
-                fontSize: 18,
-              }}
-              icon={({_, size}) => (
-                <Icon name="bookmark-outline" color="#eff0f1" size={size} />
-              )}
-              label="Dummy"
-              onPress={() => {
-                props.navigation.navigate('Dummy');
-              }}
-            />
+            {DRAWER_ITEMS.map((item) => (
+              <NavBarItem 
+                name={item.name}
+                iconName={item.iconName}
+                navigateScreen={item.navigateScreen}
+                props={props}
+              />
+            ))}
           </View>
         </View>
       </DrawerContentScrollView>
