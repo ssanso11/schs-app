@@ -14,7 +14,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 
 import HomeStackScreen from './screens/HomeScreen.js';
-import DummyStackScreen from './screens/DummyScreen.js';
+import ScheduleStackScreen from './screens/ScheduleScreen.js';
 import DrawerContent from './screens/DrawerContent.js';
 
 const Drawer = createDrawerNavigator();
@@ -24,7 +24,7 @@ function App() {
     <NavigationContainer>
       <Drawer.Navigator drawerContent={(props) => <DrawerContent {...props} />}>
         <Drawer.Screen name="Home" component={HomeStackScreen} />
-        <Drawer.Screen name="Dummy" component={DummyStackScreen} />
+        <Drawer.Screen name="Schedule" component={ScheduleStackScreen} />
       </Drawer.Navigator>
     </NavigationContainer>
   );

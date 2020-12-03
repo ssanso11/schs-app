@@ -11,9 +11,9 @@ var DRAWER_ITEMS = [
     navigateScreen: "Home"
   },
   {
-    name: "Dummy",
+    name: "Bell Schedule",
     iconName: "bookmark-outline",
-    navigateScreen: "Dummy",
+    navigateScreen: "Schedule",
   },
 ]
 

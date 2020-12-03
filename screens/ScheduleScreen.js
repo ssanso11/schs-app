@@ -6,23 +6,23 @@ import 'react-native-gesture-handler';
 import {createStackNavigator} from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const DummyStack = createStackNavigator();
+const ScheduleStack = createStackNavigator();
 
-function DummyScreen() {
+function ScheduleScreen() {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Dummy Screen</Text>
+      <Text>Schedule Screen</Text>
     </View>
   );
 }
 
-const DummyStackScreen = ({navigation}) => (
-  <DummyStack.Navigator>
-    <DummyStack.Screen
+const ScheduleStackScreen = ({navigation}) => (
+  <ScheduleStack.Navigator>
+    <ScheduleStack.Screen
       name="Home"
-      component={DummyScreen}
+      component={ScheduleScreen}
       options={{
-        title: 'School Feed',
+        title: 'Bell Schedule',
         headerStyle: {
           backgroundColor: '#990000',
         },
@@ -42,6 +42,6 @@ const DummyStackScreen = ({navigation}) => (
         ),
       }}
     />
-  </DummyStack.Navigator>
+  </ScheduleStack.Navigator>
 );
-export default DummyStackScreen;
+export default ScheduleStackScreen;
