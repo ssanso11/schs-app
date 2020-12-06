@@ -4,7 +4,7 @@ import {DrawerContentScrollView, DrawerItem} from '@react-navigation/drawer';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-var DRAWER_ITEMS = [
+const DRAWER_ITEMS = [
   {
     name: "Home",
     iconName: "home-outline",
@@ -15,6 +15,12 @@ var DRAWER_ITEMS = [
     iconName: "bookmark-outline",
     navigateScreen: "Schedule",
   },
+
+  {
+    name: "Teacher Listing",
+    iconName: "bookmark-outline",
+    navigateScreen: "TeacherListing",
+  }
 ]
 
 const NavBarItem = ({
