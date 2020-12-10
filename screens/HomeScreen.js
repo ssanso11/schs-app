@@ -16,6 +16,10 @@ import {
 import 'react-native-gesture-handler';
 import {createStackNavigator} from '@react-navigation/stack';
 import Icon from 'react-native-vector-icons/Ionicons';
+//component imports
+import EventsComponent from './EventsComponent.js';
+import NewsComponent from './NewsComponent.js';
+
 
 // Uppercase when declaring static constants (this is static data)
 const NEWS_DATA = [
@@ -60,7 +64,7 @@ const UPCOMING_EVENTS_DATA = [
   },
 ];
 
-//kind of works like a queue
+//kind of works like a stack
 const HomeStack = createStackNavigator();
 
 const HomeStackScreen = ({navigation}) => (
@@ -87,6 +91,38 @@ const HomeStackScreen = ({navigation}) => (
             backgroundColor="#990000"
           />
         ),
+      }}
+    />
+    <HomeStack.Screen 
+      name="Events" 
+      component={EventsComponent} 
+      options={{
+        title: 'Events',
+        headerStyle: {
+          backgroundColor: '#990000',
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+          fontFamily: 'Helvetica Neue',
+          fontSize: 20,
+        },
+      }}
+    />
+     <HomeStack.Screen 
+      name="News" 
+      component={NewsComponent} 
+      options={{
+        title: 'News',
+        headerStyle: {
+          backgroundColor: '#990000',
+        },
+        headerTintColor: '#fff',
+        headerTitleStyle: {
+          fontWeight: 'bold',
+          fontFamily: 'Helvetica Neue',
+          fontSize: 20,
+        },
       }}
     />
   </HomeStack.Navigator>
@@ -132,7 +168,7 @@ const NewsItem = ({ title, img_link}) => (
 );
 // This is the home screen view component. Here we will style the home page, 
 // including the Upcoming Events section and the News section
-function HomeScreen() {
+function HomeScreen({navigation}) {
   const renderUpcomingEventsItem = ({ item }) => (
     <UpcomingEventsItem 
       title={item.title}
@@ -164,7 +200,7 @@ function HomeScreen() {
           scrollEnabled={false}
         />
         <TouchableOpacity
-          onPress={() => Alert.alert('Open all events')}
+          onPress={() => navigation.navigate("Events")}
           style={styles.viewEventsButton}
         >
           <Text style={styles.viewEventsText}>View all events ></Text> 
@@ -179,7 +215,7 @@ function HomeScreen() {
           scrollEnabled={false}
         />
         <TouchableOpacity
-          onPress={() => Alert.alert('Open all news')}
+          onPress={() => navigation.navigate("News")}
           style={styles.viewEventsButton}
         >
           <Text style={styles.viewEventsText}>View all news ></Text> 

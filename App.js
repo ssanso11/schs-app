@@ -12,7 +12,6 @@ import React from 'react';
 import 'react-native-gesture-handler';
 import {NavigationContainer} from '@react-navigation/native';
 import {createDrawerNavigator} from '@react-navigation/drawer';
-
 import HomeStackScreen from './screens/HomeScreen.js';
 import ScheduleStackScreen from './screens/ScheduleScreen.js';
 import TeacherStackScreen from './screens/TeacherListing.js';
@@ -24,7 +23,7 @@ function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator drawerContent={(props) => <DrawerContent {...props} />}>
-        <Drawer.Screen name="Home" component={HomeStackScreen} />
+        <Drawer.Screen name="Home" component={HomeStackScreen}/>
         <Drawer.Screen name="Schedule" component={ScheduleStackScreen} />
         <Drawer.Screen name = "TeacherListing" component={TeacherStackScreen} />
       </Drawer.Navigator>
