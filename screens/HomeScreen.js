@@ -209,7 +209,7 @@ function HomeScreen({navigation}) {
       <View style={styles.mediaContainer}>
         <Text style={styles.titleStyle}>News</Text>
         <FlatList
-          data={NEWS_DATA}
+          data={NEWS_DATA.slice(0, 3)}
           renderItem={renderNewsItem}
           keyExtractor={item => item.id}
           scrollEnabled={false}
