@@ -15,7 +15,9 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import HomeStackScreen from './screens/HomeScreen.js';
 import ScheduleStackScreen from './screens/ScheduleScreen.js';
 import TeacherStackScreen from './screens/TeacherListing.js';
+import MapStackScreen from './screens/MapScreen.js';
 import DrawerContent from './screens/DrawerContent.js';
+
 
 const Drawer = createDrawerNavigator();
 
@@ -26,6 +28,7 @@ function App() {
         <Drawer.Screen name="Home" component={HomeStackScreen}/>
         <Drawer.Screen name="Schedule" component={ScheduleStackScreen} />
         <Drawer.Screen name = "TeacherListing" component={TeacherStackScreen} />
+        <Drawer.Screen name="School Map" component={MapStackScreen} />
       </Drawer.Navigator>
     </NavigationContainer>
   );

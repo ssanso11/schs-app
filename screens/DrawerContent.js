@@ -10,6 +10,7 @@ const DRAWER_ITEMS = [
     iconName: "home-outline",
     navigateScreen: "Home"
   },
+
   {
     name: "Bell Schedule",
     iconName: "bookmark-outline",
@@ -20,7 +21,13 @@ const DRAWER_ITEMS = [
     name: "Teacher Listing",
     iconName: "bookmark-outline",
     navigateScreen: "TeacherListing",
-  }
+  },
+
+   {
+    name: "School Map",
+    iconName: "bookmark-outline",
+    navigateScreen: "School Map",
+  },
 ]
 
 const NavBarItem = ({

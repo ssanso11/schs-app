@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, ImageBackground} from 'react-native';
 
 //react-navigation imports
 import 'react-native-gesture-handler';
@@ -10,9 +10,14 @@ const ScheduleStack = createStackNavigator();
 
 function ScheduleScreen() {
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>Schedule Screen</Text>
-    </View>
+    <View style={{flex:1, justifyContent:"center", alignItems:"center"}}>
+    <ImageBackground
+      style={{width:350, height:590}}
+      source={require('../assets/images/bell-schedule.png')}
+      >
+            
+    </ImageBackground>
+  </View>
   );
 }
 

@@ -19,6 +19,11 @@ to install the necesary dependencies, followed by
 ```bash
 npx react-native run-ios
 ```
+or 
+
+```bash
+npx react-native run-android
+```
 
 to build the app.
 
