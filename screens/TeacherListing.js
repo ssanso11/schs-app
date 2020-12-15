@@ -9,17 +9,96 @@ import Icon from 'react-native-vector-icons/Ionicons';
 const TeacherListingStack = createStackNavigator();
 const TEACHER_DATA = [
     {
-        teacherName: "Mr. Kumaishi", 
-        teacherEmail: "stuartkumaishi@sccs.net",
+        teacherName: "Adams, Larissa", 
+        teacherSubject: "Social Studies",
         id: "0"
     
     },
 
     {
-        teacherName: "Mr. Amine", 
-        teacherEmail: "daddybouchti.net",
+        teacherName: "Aldo, Rueben", 
+        teacherSubject: "RSP",
         id: "1"
-    }
+    },
+
+    {
+        teacherName: "Anopolsky, Adam", 
+        teacherSubject: "RSP",
+        id: "3"
+    },
+
+    {
+        teacherName: "Andrews, Kelly", 
+        teacherSubject: "Physical Education",
+        id: "4"
+    },
+
+    {
+        teacherName: "Arnold, Steve", 
+        teacherSubject: "Campus Supervisor",
+        id: "5"
+    },
+
+    {
+        teacherName: "Bacon, Nick", 
+        teacherSubject: "English",
+        id: "6"
+    },
+
+    {
+        teacherName: "Barret, Annie", 
+        teacherSubject: "Physical Education",
+        id: "7"
+    },
+
+    {
+        teacherName: "Behr, Lindsay", 
+        teacherSubject: "Fine Arts",
+        id: "8"
+    },
+
+    {
+        teacherName: "Block, Mistyn", 
+        teacherSubject: "Resource Specialist",
+        id: "9"
+    },
+
+    {
+        teacherName: "Boscacci, Peter", 
+        teacherSubject: "C.T.E",
+        id: "10"
+    },
+
+    {
+        teacherName: "Bouchti, Amine", 
+        teacherSubject: "Mathematics, Computer Science",
+        id: "11"
+    },
+
+    {
+        teacherName: "Helena, Bradford", 
+        teacherSubject: "English",
+        id: "12"
+    },
+
+    {
+        teacherName: "Brown, Jeanie", 
+        teacherSubject: "Account Technician",
+        id: "13"
+    },
+
+    {
+        teacherName: "Buckley, Trevor", 
+        teacherSubject: "Associate Mental Health Specialist",
+        id: "14"
+    },
+
+    {
+        teacherName: "Byrd, Sierra", 
+        teacherSubject: "Library Media Assistant",
+        id: "15"
+    },
+
 ]
 function TeacherListing() {
     const renderTeacherItem = ({item}) => (
@@ -29,7 +108,7 @@ function TeacherListing() {
             </Text>
 
             <Text>
-                {item.teacherEmail}
+                {item.teacherSubject}
             </Text>
         </View>
     )
