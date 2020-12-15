@@ -110,6 +110,10 @@ function TeacherListing() {
             <Text>
                 {item.teacherSubject}
             </Text>
+
+            <Text>
+                {}
+            </Text>
         </View>
     )
   return (
