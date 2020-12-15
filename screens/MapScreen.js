@@ -1,5 +1,7 @@
 import React from 'react';
-import {View, Text, ImageBackground} from 'react-native';
+import {View, ImageBackground, Dimensions} from 'react-native';
+
+let deviceWidth = Dimensions.get('window').width;
 
 //react-navigation imports
 import 'react-native-gesture-handler';
@@ -12,7 +14,7 @@ function MapScreen() {
   return (
     <View style={{flex:1, justifyContent:"center", alignItems:"center"}}>
       <ImageBackground
-        style={{width:400, height:525}}
+        style={{width:deviceWidth, aspectRatio:1/1.310626702}}
         source={require('../assets/images/school-map.png')}
         >
               

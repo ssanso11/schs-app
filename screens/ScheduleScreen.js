@@ -1,5 +1,7 @@
 import React from 'react';
-import {View, Text, ImageBackground} from 'react-native';
+import {View, ImageBackground, Dimensions} from 'react-native';
+
+let deviceHeight = Dimensions.get('window').height;
 
 //react-navigation imports
 import 'react-native-gesture-handler';
@@ -12,7 +14,7 @@ function ScheduleScreen() {
   return (
     <View style={{flex:1, justifyContent:"center", alignItems:"center"}}>
     <ImageBackground
-      style={{width:350, height:590}}
+      style={{height:6*deviceHeight/7, aspectRatio: 1/1.778280542}}
       source={require('../assets/images/bell-schedule.png')}
       >
             
