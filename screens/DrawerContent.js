@@ -13,19 +13,19 @@ const DRAWER_ITEMS = [
 
   {
     name: "Bell Schedule",
-    iconName: "bookmark-outline",
+    iconName: "bell-outline",
     navigateScreen: "Schedule",
   },
 
   {
     name: "Teacher Listing",
-    iconName: "bookmark-outline",
+    iconName: "book-account-outline",
     navigateScreen: "TeacherListing",
   },
 
    {
     name: "School Map",
-    iconName: "bookmark-outline",
+    iconName: "map-marker-radius-outline",
     navigateScreen: "School Map",
   },
 ]
