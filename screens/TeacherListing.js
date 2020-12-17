@@ -101,7 +101,9 @@ const TEACHER_DATA = [
 
 ]
 function TeacherListing() {
-    const renderTeacherItem = ({item}) => (
+    const renderTeacherItem = ({item}) => {
+        const teacherEmail=item.teacherName.substring(item.teacherName.indexOf(",")+2) + item.teacherName.substring(0,item.teacherName.indexOf(",")) + "@sccs.net"
+        return (
         <View>
             <Text>
                 {item.teacherName}
@@ -110,12 +112,17 @@ function TeacherListing() {
             <Text>
                 {item.teacherSubject}
             </Text>
+            
+            <Text>
+                {teacherEmail.toLowerCase()}
+            </Text>
 
             <Text>
                 {}
             </Text>
         </View>
-    )
+        )
+    }
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <FlatList
